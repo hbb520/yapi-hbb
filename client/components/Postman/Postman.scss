@@ -1,0 +1,266 @@
+@import '../../styles/mixin.scss';
+.postman {
+
+
+  
+  .adv-button {
+    margin-bottom: 8px;
+  }
+  .pretty-editor {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    min-height: 200px;
+  }
+  .pretty-editor-body {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    min-height: 300px;
+  }
+  .pretty-editor-header {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    min-height: 300px;
+  }
+
+  .interface-test {
+    padding: .24rem;
+    .ant-checkbox-wrapper{
+      display: flex;
+    }
+  }
+
+  
+
+  .insert-code{
+    
+    margin-right: 20px;
+    .code-item{
+      border: 1px solid #dbd9d9;
+      padding:3px;
+      line-height: 30px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .case-script{
+    min-height: 500px;
+    margin: 10px;
+  }
+
+  .response-tab{    
+    margin-top: 10px;
+    .ant-tabs-nav{
+      background: #f7f7f7;
+      border-radius: 0 0 4px 4px;      
+      border: 1px solid #d9d9d9;
+      width: 100%;
+    }
+
+    .header, .body{
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .response-test{
+      min-height: 400px;
+    }
+  }
+
+  .ant-spin-blur {
+    .res-code.success {
+      background-color: transparent ;
+    }
+    .res-code.fail {
+      background-color: transparent;
+    }
+  }
+  .res-code {
+    padding: 2px .28rem;
+    color: #fff;
+    transition: all .2s;
+    position: relative;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  .res-code.success {
+    background-color: $color-antd-green;
+  }
+  .res-code.fail {
+    background-color: $color-antd-red;
+  }
+
+  // 容器：左侧是header 右侧是body
+  .container-header-body {
+    display: flex;
+    padding-bottom: .36rem;
+    .header, .body {
+      flex: 1 0 300px;
+      .pretty-editor-header, .pretty-editor-body {
+        height: 100%;
+      }
+      .postman .pretty-editor-body {
+        min-height: 200px;
+      }
+      .ace_print-margin {
+        display: none;
+      }
+    }
+    .header {
+      max-width: 400px;
+    }
+    .container-title {
+      padding: .08rem 0;
+    }
+    .resizer {
+      flex: 0 0 21px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: #acaaaa;
+        opacity: .8;
+        position: absolute;
+        left: 16px;
+      }
+    }
+    // res body 无返回json时显示text信息
+    .res-body-text {
+      height: 100%;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 8px;
+    }
+  }
+
+  .has-plugin, .req-part, .resp-part {
+    margin-bottom: 16px;
+  }
+  .url {
+    display: flex;
+    margin: 24px 10px;
+    position: relative;
+    .url-copy-icon1{
+      position: absolute;
+      top: 5px;
+      right: 176px;
+      padding: 5px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .url-copy-icon2{
+      position: absolute;
+      top: 4px;
+      right: 152px;
+      padding: 5px;
+      cursor: pointer;
+      z-index: 100;
+    }
+  }
+  .key-value-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 0;
+    .key {
+      flex-basis: 220px;
+    }
+    .value {
+      flex-grow: 1;
+    }
+    .eq-symbol {
+      margin: 0 5px;
+    }
+    .params-enable{
+      width: 24px;
+    }
+  }
+  .icon-btn {
+    cursor: pointer;
+    margin-left: 6px;
+  }
+  .icon-btn:hover {
+    color: #2395f1;
+  }
+  .ReactJson_content{
+    box-sizing: border-box;
+    min-width: 100%;
+    height: 560px;
+    overflow-y: auto;
+  }
+  .tint{
+    .react-json-view{
+      font-size: 13px !important;
+      font-family: 'Consolas' !important;
+      background-color: #F7F7F7 !important;
+      line-height: 15px !important;
+      .object-key{
+        color: rgb(127, 0, 85) !important;
+        opacity: 1 !important;
+      }
+      .object-key-val{
+        padding-top:0px !important;
+        padding-bottom: 0px !important;
+      }
+      .string-value{
+        color: darkblue  !important;
+      }
+      .variable-value{
+        div{
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+  .dark{
+    .react-json-view{
+      font-size: 13px !important;
+      font-family: 'Consolas' !important;
+      background-color: #292D35 !important;
+      line-height: 15px !important;
+      .object-key{
+        color: #2F9EC4 !important;
+        opacity: 1 !important;
+      }
+      .object-key-val{
+        padding-top:0px !important;
+        padding-bottom: 0px !important;
+      }
+      .string-value{
+        color: #AA57CC  !important;
+      }
+      .variable-value{
+        color: #FFB639  !important;
+        div{
+          padding: 0 !important;
+          background-color: transparent !important
+        }
+      }
+      .object-size{
+        color: #cccccc  !important;
+      }
+      .variable-row{
+        border-left: 1px solid #343F41 !important;
+      }
+      .object-key-val{
+        border-left: 1px solid #343F41 !important;
+      }
+    }
+  }
+
+  .variable-row{
+    padding-top:0px !important;
+    padding-bottom: 0px !important;
+  }
+  .ant-collapse-header{
+    padding: 8px 0 8px 40px !important;
+  }
+
+
+}
+
+.env-modal{
+  .ant-modal-body{
+    padding: 0;
+  }
+}
