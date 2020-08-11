@@ -1,0 +1,32 @@
+{
+  "port": "3000",
+  "adminAccount": "admin@admin.com",
+  "db": {
+    "servername": "127.0.0.1",
+    "DATABASE": "hbb",
+    "port": 27017,
+
+    "authSource": ""
+  },
+  "mail": {
+    "enable": true,
+    "host": "smtp.qq.com",
+    "port": 465,
+    "from": "875670250@qq.com",
+    "auth": {
+      "user": "875670250@163.com",
+      "pass": "ugawddfbbutkbcef"
+    }
+  },
+  "ldapLogin": {
+    "enable": true,
+    "server": "ldap://l-ldapt1.com",
+    "baseDn": "CN=Admin,CN=Users,DC=test,DC=com",
+    "bindPassword": "password123",
+    "searchDn": "OU=UserContainer,DC=test,DC=com",
+    "searchStandard": "mail",
+    "emailPostfix": "875670250@qq.com",
+    "emailKey": "mail",
+    "usernameKey": "name"
+  }
+}
